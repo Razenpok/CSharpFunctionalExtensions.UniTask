@@ -1,0 +1,34 @@
+#nullable enable
+
+using System;
+using Cysharp.Threading.Tasks;
+
+namespace CSharpFunctionalExtensions
+{
+    public static partial class ResultExtensions
+    {
+        public static UniTask<Result<T>> EnsureNotNull<T>(this Result<T?> result, Func<UniTask<string>> errorFactory)
+            where T : class
+        {
+            return result.Ensure(value => UniTask.FromResult(value != null), _ => errorFactory()).Map(value => value!);
+        }
+
+        public static UniTask<Result<T>> EnsureNotNull<T>(this Result<T?> result, Func<UniTask<string>> errorFactory)
+            where T : struct
+        {
+            return result.Ensure(value => UniTask.FromResult(value != null), _ => errorFactory()).Map(value => value!.Value);
+        }
+
+        public static UniTask<Result<T, E>> EnsureNotNull<T, E>(this Result<T?, E> result, Func<UniTask<E>> errorFactory)
+            where T : class
+        {
+            return result.Ensure(value => UniTask.FromResult(value != null), _ => errorFactory()).Map(value => value!);
+        }
+
+        public static UniTask<Result<T, E>> EnsureNotNull<T, E>(this Result<T?, E> result, Func<UniTask<E>> errorFactory)
+            where T : struct
+        {
+            return result.Ensure(value => UniTask.FromResult(value != null), _ => errorFactory()).Map(value => value!.Value);
+        }
+    }
+}

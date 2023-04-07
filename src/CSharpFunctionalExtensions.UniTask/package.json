@@ -1,0 +1,8 @@
+{
+  "name": "ext.csharpfunctionalextensions.unitask",
+  "displayName": "CSharpFunctionalExtensions.UniTask",
+  "version": "2.38.0",
+  "unity": "2020.3",
+  "description": "UniTask extensions for CSharpFunctionalExtensions",
+  "license": "MIT"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "CSharpFunctionalExtensions.UniTask",
+    "rootNamespace": "CSharpFunctionalExtensions",
+    "references": [
+        "UniTask"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "CSharpFunctionalExtensions.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "noEngineReferences": true
+}
