@@ -7,20 +7,21 @@ UniTask extensions for [CSharpFunctionalExtensions][]
 
 There are several ways to install this library into our project:
 
-- **Clone source code**: Clone or [download][] this repository and put the *src/CSharpFunctionalExtensions.UniTask*
-  folder somewhere in your Unity project
-- **Unity Package Manager (UPM)**: Add the following line to *Packages/manifest.json*:
-  - `"ext.csharpfunctionalextensions.unitask": "https://github.com/Razenpok/CSharpFunctionalExtensions.UniTask.git?path=src/CSharpFunctionalExtensions.UniTask",`
 - **[OpenUPM][]**: After installing [openupm-cli][], run the following command:
   - `openupm add ext.csharpfunctionalextensions.unitask`
+- **Unity Package Manager (UPM)**: Add the following line to *Packages/manifest.json*:
+  - `"ext.csharpfunctionalextensions.unitask": "https://github.com/Razenpok/CSharpFunctionalExtensions.UniTask.git?path=src/CSharpFunctionalExtensions.UniTask",`
+- **Clone source code**: Clone or [download][] this repository and put the *src/CSharpFunctionalExtensions.UniTask*
+  folder somewhere in your Unity project
 
 You will also need to obtain a compatible version of CSharpFunctionalExtensions library (**major** version must match
 with CSharpFunctionalExtensions.UniTask):
 
+- **[UnityNuGet registry][]**: you can install the library directly via OpenUPM using the following comand:
+  - `openupm add org.nuget.csharpfunctionalextensions`
+- **[NuGetForUnity plugin][]**
 - **NuGet**: Download a .nupkg file from [NuGet registry][], change the file extension to .zip, unzip it,
   find the .dll file in *lib/netstandard2.0* folder
-- **[UnityNuGet registry][]**: please vote for [this issue][] so the package will be available in this registry
-- **[NuGetForUnity plugin][]**
 
 [//]: # (Links)
 
